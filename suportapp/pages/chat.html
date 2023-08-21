@@ -1,207 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App de Chats</title>
-    <!-- Enlace a Bootstrap CSS (se puede obtener desde el sitio oficial de Bootstrap o usar un enlace CDN) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App de Chats</title>
+  <!-- Enlace a Bootstrap CSS (se puede obtener desde el sitio oficial de Bootstrap o usar un enlace CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
-    <header class="bg-dark text-white py-3 text-center">
-        <!-- Encabezado de la app de chats -->
-        <h1 class="h4">Chats</h1>
-    </header>
-    <main class="container">
-        <div class="row">
-            <!-- Barra lateral colapsable -->
-            <!--   <div class="float-left">
-                    <button class="btn btn-secondary" id="toggleSidebarBtn">
-                        ☰
-                    </button>
-                </div>  --> 
-              <div class="col-lg-3 col-md-4 col-sm-5 sidebar"; id="toggleSidebarBtn">
-                <!-- Listado de amigos -->
-                <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-amigo1-list" data-toggle="list" href="#list-amigo1" role="tab" aria-controls="amigo_1">John Doe</a>
-                    <a class="list-group-item list-group-item-action" id="list-amigo2-list" data-toggle="list" href="#list-amigo2" role="tab" aria-controls="amigo_2">Soporte</a>
-                    <a class="list-group-item list-group-item-action" id="list-amigo3-list" data-toggle="list" href="#list-amigo3" role="tab" aria-controls="amigo_3">Joe Wow</a>
-                    <a class="list-group-item list-group-item-action" id="list-amigo4-list" data-toggle="list" href="#list-amigo4" role="tab" aria-controls="amigo_4">María Yei</a>
-                    <a class="list-group-item list-group-item-action" id="list-amigo5-list" data-toggle="list" href="#list-amigo5" role="tab" aria-controls="amigo_5">Julia Leal</a>
-                </div> 
-            </div>
-
-            <!-- Área de mensajes en el contenido principal -->
-            <div class="col-lg-9 col-md-8 col-sm-7 content">
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="list-amigo1" role="tabpanel" aria-labelledby="list-amigo1-list">
-                        <!-- Header chat -->
-                        <div class="chat-header bg-light p-2 mb-3">
-                            <h2 class="h6">John Doe</h2>
-                        </div>
-                        <div class="chat-messages overflow-auto">
-                            <!-- Área de mensajes -->
-                            <p style="font-size: xx-small;">15:00</p>
-                            <div class="d-flex flex-row justify-content-start mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
-                                  alt="avatar 1" style="width: 45px; height: 100%;">
-                                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
-                                  <p class="small mb-0">Hola como estas?</p>
-                                </div> 
-                            </div>
-                            <div class="d-flex flex-row justify-content-end mb-4">
-                                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
-                                  <p class="small mb-0">Bien y tu? Muchas gracias</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                                  alt="avatar 1" style="width: 45px; height: 100%;">
-                            </div> 
-                            <div class="d-flex flex-row justify-content-start mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
-                                  alt="avatar 1" style="width: 45px; height: 100%;">
-                                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
-                                  <p class="small mb-0">Yo bien también, espero tengas un buen día :D</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="list-amigo2" role="tabpanel" aria-labelledby="list-amigo2-list">
-                        <!-- Header chat -->
-                        <div class="chat-header bg-light p-2 mb-3">
-                            <h2 class="h6">Soporte</h2>
-                        </div>
-                        <div class="chat-messages overflow-auto">
-                            <!-- Área de mensajes -->
-
-
-                            <div class="d-flex flex-row justify-content-end mb-4">
-                                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
-                                  <p class="small mb-0">Hola, necesito ayuda para obtener mi liquidación de sueldo.</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                                  alt="avatar 1" style="width: 45px; height: 100%;">
-                            </div>
-
-                            <div class="d-flex flex-row justify-content-start mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
-                                  alt="avatar 1" style="width: 45px; height: 100%;">
-                                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
-                                  <p class="small mb-0">Hola, claro, por favor contáctate con el área de RRHH al correo   <a href="mailto:#">rrhh@empresa.com</a>. Ten una buena tarde.</p>
-                                </div>
-                            </div>
-
-                            <div class="d-flex flex-row justify-content-end mb-4">
-                                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
-                                  <p class="small mb-0">Muchas gracias, han resuelto mi solicitud.</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                                  alt="avatar 1" style="width: 45px; height: 100%;">
-                            </div>
-                    
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="list-amigo3" role="tabpanel" aria-labelledby="list-amigo3-list">
-                        <!-- Header chat -->
-                        <div class="chat-header bg-light p-2 mb-3">
-                            <h2 class="h6">Joe Wow</h2>
-                        </div>
-                        <div class="chat-messages overflow-auto">
-                            <div class="chat-messages overflow-auto">
-                                <!-- Área de mensajes -->
-                                <div class="d-flex flex-row justify-content-start mb-4">
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
-                                      alt="avatar 1" style="width: 45px; height: 100%;">
-                                    <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
-                                      <p class="small mb-0">Hola, recuerda la reunión de hoy a las 13hrs en la sala de conferencias.</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row justify-content-end mb-4">
-                                    <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
-                                      <p class="small mb-0">Hola, claro, ahí estaré.</p>
-                                    </div>
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                                      alt="avatar 1" style="width: 45px; height: 100%;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="list-amigo4" role="tabpanel" aria-labelledby="list-amigo4-list">
-                        <!-- Header chat -->
-                        <div class="chat-header bg-light p-2 mb-3">
-                            <h2 class="h6">María Yei</h2>
-                        </div>
-                        <div class="chat-messages overflow-auto">
-                            <!-- Área de mensajes -->
-                            <div class="d-flex flex-row justify-content-start mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
-                                  alt="avatar 1" style="width: 45px; height: 100%;">
-                                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
-                                  <p class="small mb-0">Hola como estas?</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-end mb-4">
-                                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
-                                  <p class="small mb-0">Bien y tu? Muchas gracias</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                                  alt="avatar 1" style="width: 45px; height: 100%;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="list-amigo5" role="tabpanel" aria-labelledby="list-amigo5-list">
-                        <!-- Header chat -->
-                        <div class="chat-header bg-light p-2 mb-3">
-                            <h2 class="h6">Julia Leal</h2>
-                        </div>
-                        <div class="chat-messages overflow-auto">
-                            <!-- Área de mensajes -->
-                            <div class="d-flex flex-row justify-content-start mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
-                                  alt="avatar 1" style="width: 45px; height: 100%;">
-                                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
-                                  <p class="small mb-0">Hola como estas?</p>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row justify-content-end mb-4">
-                                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
-                                  <p class="small mb-0">Bien y tu? Muchas gracias</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                                  alt="avatar 1" style="width: 45px; height: 100%;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form class="message-form mt-3">
-                    <!-- Formulario para enviar mensajes -->
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Escribe tu mensaje...">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
-                </form>
-            </div>
+  <header>
+    <!-- Encabezado de la app de chats -->
+    <h1>Chats</h1>
+  </header>
+  <main class="container">
+    <div class="row">
+      <!-- Barra lateral colapsable -->
+      <div class="col-lg-3 col-md-4 col-sm-5 sidebar" id="toggleSidebarBtn">
+        <!-- Listado de amigos -->
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active" id="list-amigo1-list" data-toggle="list"
+            href="#list-amigo1" role="tab" aria-controls="amigo_1">John Doe</a>
+          <a class="list-group-item list-group-item-action" id="list-amigo2-list" data-toggle="list" href="#list-amigo2"
+            role="tab" aria-controls="amigo_2">Soporte</a>
+          <a class="list-group-item list-group-item-action" id="list-amigo3-list" data-toggle="list" href="#list-amigo3"
+            role="tab" aria-controls="amigo_3">Joe Wow</a>
+          <a class="list-group-item list-group-item-action" id="list-amigo4-list" data-toggle="list" href="#list-amigo4"
+            role="tab" aria-controls="amigo_4">María Yei</a>
+          <a class="list-group-item list-group-item-action" id="list-amigo5-list" data-toggle="list" href="#list-amigo5"
+            role="tab" aria-controls="amigo_5">Julia Leal</a>
         </div>
-    </main>
+      </div>
+
+      <!-- Área de mensajes en el contenido principal -->
+      <div class="col-lg-9 col-md-8 col-sm-7 content">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="list-amigo1" role="tabpanel" aria-labelledby="list-amigo1-list">
+            <!-- Header chat -->
+            <div class="chat-header bg-light p-2 mb-3">
+              <h2 class="h6 mb-0">John Doe</h2>
+            </div>
+            <div class="chat-messages overflow-auto">
+              <!-- Área de mensajes -->
+              <p style="font-size: xx-small;">15:00</p>
+              <div class="d-flex flex-row justify-content-start mb-4">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar 1"
+                  style="width: 45px; height: 100%;">
+                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237);">
+                  <p class="small mb-0">Hola como estas?</p>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-end mb-4">
+                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
+                  <p class="small mb-0">Bien y tu? Muchas gracias</p>
+                </div>
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar 1"
+                  style="width: 45px; height: 100%;">
+              </div>
+              <div class="d-flex flex-row justify-content-start mb-4">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp" alt="avatar 1"
+                  style="width: 45px; height: 100%;">
+                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237);">
+                  <p class="small mb-0">Yo bien también, espero tengas un buen día :D</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="list-amigo2" role="tabpanel" aria-labelledby="list-amigo2-list">
+            <!-- Header chat -->
+            <div class="chat-header bg-light p-2 mb-3">
+              <h2 class="h6 mb-0">Soporte</h2>
+            </div>
+            <div class="chat-messages overflow-auto">
+              <!-- Área de mensajes -->
 
 
-    <div class="pata">
-      <p>Bárbara Pazos Fernández</p>
+              <div class="d-flex flex-row justify-content-end mb-4">
+                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
+                  <p class="small mb-0">Hola, necesito ayuda para obtener mi liquidación de sueldo.</p>
+                </div>
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar 1"
+                  style="width: 45px; height: 100%;">
+              </div>
+
+              <div class="d-flex flex-row justify-content-start mb-4">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp" alt="avatar 1"
+                  style="width: 45px; height: 100%;">
+                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237);">
+                  <p class="small mb-0">Hola, claro, por favor contáctate con el área de RRHH al correo <a
+                      href="mailto:#">rrhh@empresa.com</a>. Ten una buena tarde.</p>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row justify-content-end mb-4">
+                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
+                  <p class="small mb-0">Muchas gracias, han resuelto mi solicitud.</p>
+                </div>
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar 1"
+                  style="width: 45px; height: 100%;">
+              </div>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="list-amigo3" role="tabpanel" aria-labelledby="list-amigo3-list">
+            <!-- Header chat -->
+            <div class="chat-header bg-light p-2 mb-3">
+              <h2 class="h6 mb-0">Joe Wow</h2>
+            </div>
+            <div class="chat-messages overflow-auto">
+              <div class="chat-messages overflow-auto">
+                <!-- Área de mensajes -->
+                <div class="d-flex flex-row justify-content-start mb-4">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                    alt="avatar 1" style="width: 45px; height: 100%;">
+                  <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237);">
+                    <p class="small mb-0">Hola, recuerda la reunión de hoy a las 13hrs en la sala de conferencias.</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-row justify-content-end mb-4">
+                  <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
+                    <p class="small mb-0">Hola, claro, ahí estaré.</p>
+                  </div>
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                    alt="avatar 1" style="width: 45px; height: 100%;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="list-amigo4" role="tabpanel" aria-labelledby="list-amigo4-list">
+            <!-- Header chat -->
+            <div class="chat-header bg-light p-2 mb-3">
+              <h2 class="h6 mb-0">María Yei</h2>
+            </div>
+            <div class="chat-messages overflow-auto">
+              <!-- Área de mensajes -->
+              <div class="d-flex flex-row justify-content-start mb-4">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp" alt="avatar 1"
+                  style="width: 45px; height: 100%;">
+                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237);">
+                  <p class="small mb-0">Hola como estas?</p>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-end mb-4">
+                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
+                  <p class="small mb-0">Bien y tu? Muchas gracias</p>
+                </div>
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar 1"
+                  style="width: 45px; height: 100%;">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="list-amigo5" role="tabpanel" aria-labelledby="list-amigo5-list">
+            <!-- Header chat -->
+            <div class="chat-header bg-light p-2 mb-3">
+              <h2 class="h6 mb-0">Julia Leal</h2>
+            </div>
+            <div class="chat-messages overflow-auto">
+              <!-- Área de mensajes -->
+              <div class="d-flex flex-row justify-content-start mb-4">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp" alt="avatar 1"
+                  style="width: 45px; height: 100%;">
+                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237);">
+                  <p class="small mb-0">Hola como estas?</p>
+                </div>
+              </div>
+              <div class="d-flex flex-row justify-content-end mb-4">
+                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
+                  <p class="small mb-0">Bien y tu? Muchas gracias</p>
+                </div>
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar 1"
+                  style="width: 45px; height: 100%;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="message-form mt-3">
+          <!-- Formulario para enviar mensajes -->
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Escribe tu mensaje...">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </div>
     </div>
+  </main>
+  <footer>
+    <div class="pata">
+      <hr>
+      <div class="pata-texto">Bárbara Pazos Fernández © 2023</div>
+    </div>
+  </footer>
 
-    <footer class="pata">
-        aaaaaaaaaaaa
-        
-    </footer>
 
-
-    <!-- Enlaces a Bootstrap JS y archivo JavaScript personalizado (main.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="../script/main.js"></script>
+  <!-- Enlaces a Bootstrap JS y archivo JavaScript personalizado (main.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="../script/main.js"></script>
 </body>
+
 </html>

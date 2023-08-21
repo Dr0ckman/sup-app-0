@@ -34,6 +34,10 @@ header {
     opacity: 0.9;
 }
 
+.chat-header {
+    border-radius: 8px;
+}
+
 .btn:hover {
     background-color: orangered;
     border-color: orangered;
