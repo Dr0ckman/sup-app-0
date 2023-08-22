@@ -1,3 +1,16 @@
+/* Media query para esconder el botón cuando la pantalla sea 
+más grande que md */
+
+@media screen and (min-width: 768px) {
+    #toggle-chat {
+        display: none;
+    }
+}
+
+.bg-secondary {
+    --bs-bg-opacity: 0.75
+}
+
 * {
     margin: 0;
     padding: 0;
